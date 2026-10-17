@@ -1,19 +1,15 @@
-# DENBROWN AI PHOTO V11 — Deep Learning Local
+# DENBROWN AI PHOTO V13 — Ghép theo ảnh tham chiếu
 
-Bản nâng cấp từ V10. Tải `index.html` lên GitHub Pages để chạy.
+## Sử dụng
+1. Mở `index.html` qua GitHub Pages (HTTPS).
+2. Thêm ảnh cưới.
+3. Trong mục **Ảnh tham chiếu**, chọn ảnh album mẫu.
+4. Kiểm tra viền xanh nhận diện các khung. Có thể chọn số khung 1–8 và phân tích lại.
+5. Bấm **GHÉP THEO ẢNH MẪU**. Sau đó chỉnh sửa và dùng nút **Lưu vào Ảnh / Xuất JPG**.
 
-## Có thật
-- Mô hình học sâu MediaPipe BlazeFace chạy suy luận trên thiết bị (CPU / WebAssembly), phát hiện khuôn mặt sau khi bấm nút AI.
-- Khi ghép, tự căn vùng cắt theo tâm khuôn mặt đầu tiên, trong giới hạn vùng ảnh.
-- Phân tích độ sáng, độ nét và ảnh gần trùng bằng thuật toán V10.
-- Tự ghép trang, kéo/zoom/xoay, xuất JPG.
-
-## Chưa có
-- AI chọn ảnh đẹp bằng mạng học sâu; phân loại cô dâu/chú rể; nhận diện cảm xúc; huấn luyện mô hình; Gemini hoặc ChatGPT tích hợp.
-- Chưa có kiểm thử trực tiếp trên Safari iPhone.
-
-## Điều kiện
-- Lần đầu cần internet tải JavaScript WASM và model từ CDN/Google. Không cần API key/credit.
-- Ảnh được xử lý cục bộ, nhưng các thư viện và model được tải từ bên ngoài.
-- Nếu CDN bị chặn hoặc thiết bị thiếu bộ nhớ, nhận diện không chạy; chế độ ghép thuật toán vẫn hoạt động.
-- Dùng HTTPS (GitHub Pages) để chạy ổn định.
+## Thực chất kỹ thuật
+- Phân tích các đường có phương sai màu thấp (khoảng trắng/gutter) bằng pixel, chia ảnh thành vùng chữ nhật và áp dụng cho album mới. **Không phải AI học sâu hiểu layout**, không sao chép chính xác mọi chi tiết mẫu.
+- Mô hình BlazeFace học sâu từ V11 vẫn có thể được tải thủ công để phát hiện mặt. Lần đầu cần internet để tải model, không cần API key/credit.
+- Vẫn giữ xuất JPG và bảng chia sẻ iOS của V12. Safari yêu cầu xác nhận **Lưu hình ảnh**.
+- Khung lồng nhau, khung nghiêng, viền trang trí, typography, ảnh không có đường chia rõ có thể bị nhận diện sai.
+- Mã chưa được kiểm thử trực tiếp trên Safari iPhone.
