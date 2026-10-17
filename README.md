@@ -1,15 +1,9 @@
-# DENBROWN AI PHOTO V13 — Ghép theo ảnh tham chiếu
+# DENBROWN AI PHOTO V14 — Ảnh mẫu + 1 đến 9 ảnh/trang
 
-## Sử dụng
-1. Mở `index.html` qua GitHub Pages (HTTPS).
-2. Thêm ảnh cưới.
-3. Trong mục **Ảnh tham chiếu**, chọn ảnh album mẫu.
-4. Kiểm tra viền xanh nhận diện các khung. Có thể chọn số khung 1–8 và phân tích lại.
-5. Bấm **GHÉP THEO ẢNH MẪU**. Sau đó chỉnh sửa và dùng nút **Lưu vào Ảnh / Xuất JPG**.
+- Đưa phần Ảnh tham chiếu lên đầu trang để dễ thấy trên iPhone.
+- Chọn 1–9 ảnh mỗi trang. 6–9 ảnh dùng lưới tự động; 1–5 giữ bố cục cũ.
+- Tự ghép theo ảnh mẫu bằng thuật toán tìm ranh giới (không phải model AI hiểu bố cục).
+- Chọn số khung ảnh tham chiếu từ 1–9.
+- Giữ chức năng xuất JPG và chia sẻ vào ứng dụng Ảnh theo khả năng iOS.
 
-## Thực chất kỹ thuật
-- Phân tích các đường có phương sai màu thấp (khoảng trắng/gutter) bằng pixel, chia ảnh thành vùng chữ nhật và áp dụng cho album mới. **Không phải AI học sâu hiểu layout**, không sao chép chính xác mọi chi tiết mẫu.
-- Mô hình BlazeFace học sâu từ V11 vẫn có thể được tải thủ công để phát hiện mặt. Lần đầu cần internet để tải model, không cần API key/credit.
-- Vẫn giữ xuất JPG và bảng chia sẻ iOS của V12. Safari yêu cầu xác nhận **Lưu hình ảnh**.
-- Khung lồng nhau, khung nghiêng, viền trang trí, typography, ảnh không có đường chia rõ có thể bị nhận diện sai.
-- Mã chưa được kiểm thử trực tiếp trên Safari iPhone.
+Đăng GitHub Pages: thay file index.html ở thư mục gốc, chờ triển khai, mở URL kèm ?v=14 để tránh bộ nhớ đệm.
